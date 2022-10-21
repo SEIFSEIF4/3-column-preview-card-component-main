@@ -53,6 +53,12 @@ body {
     .container .content {
         max-width: 256px;
     }
+    .container .content-sedans {
+        border-radius: 5px 5px 0 0;
+    }
+    .container .content-luxury {
+        border-radius: 0 0 5px 5px;
+    }
 }
 /* Medium m */
 @media (max-width: 424px) {
@@ -61,6 +67,12 @@ body {
     }
     .container .content {
         max-width: 330px;
+    }
+    .container .content-sedans {
+        border-radius: 5px 5px 0 0;
+    }
+    .container .content-luxury {
+        border-radius: 0 0 5px 5px;
     }
 }
 /* Tablet */
@@ -79,6 +91,12 @@ body {
     .container .content .text p {
         margin-bottom: 7.0625rem;
     }
+    .container .content-sedans {
+        border-radius: 5px 0 0 5px;
+    }
+    .container .content-luxury {
+        border-radius: 0 5px 5px 0;
+    }
 }
 /* Medium pc */
 @media (min-width: 992px) {
@@ -95,6 +113,12 @@ body {
     .container .content .text p {
         margin-bottom: 7.0625rem;
     }
+    .container .content-sedans {
+        border-radius: 5px 0 0 5px;
+    }
+    .container .content-luxury {
+        border-radius: 0 5px 5px 0;
+    }
 }
 /* Large pc */
 @media (min-width: 1200px) {
@@ -110,6 +134,12 @@ body {
     }
     .container .content .text p {
         margin: 2rem 0 7rem;
+    }
+    .container .content-sedans {
+        border-radius: 5px 0 0 5px;
+    }
+    .container .content-luxury {
+        border-radius: 0 5px 5px 0;
     }
 }
 /* End Global Rules */
@@ -152,7 +182,6 @@ body {
 
 .container .content-sedans {
     background-color: var(--BrightOrange-color);
-    border-radius: 5px 5px 0 0;
 }
 .container .content-sedans .link a {
     color: var(--BrightOrange-color);
@@ -169,17 +198,16 @@ body {
 /* End suvs */
 .container .content-luxury {
     background-color: var(--VeryDarkCyan-color);
-    border-radius: 0 0 5px 5px;
 }
 .container .content-luxury .link a {
     color: var(--VeryDarkCyan-color);
 }
-@media (width<=769px) {
+/* @media (width<=769px) {
     .container .content-sedans {
         border-radius: 5px 0 0 5px;
     }
     .container .content-luxury {
         border-radius: 0 5px 5px 0;
     }
-}
+} */
 /* End luxury */
