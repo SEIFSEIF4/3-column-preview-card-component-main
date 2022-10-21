@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* Start Variables */
+:root {
+    /* Primary */
+    --BrightOrange-color: hsl(31, 77%, 52%);
+    --DarkCyan-color: hsl(184, 100%, 22%);
+    --VeryDarkCyan-color: hsl(179, 100%, 13%);
+    /* Neutral */
+    --paragraphs-color: hsla(0, 0%, 100%, 0.75);
+    --lightGray-color: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+    /* Font */
+    --paragraph-font-size: 0.9375rem;
+}
+
+/* End Variables */
+/* End Global Rules */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-family: "Big Shoulders Display", cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightGray-color);
+}
+
+.container {
+    padding: 1.5rem;
+    margin: 10em auto 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgba(123, 196, 230, 0.356);
+    border-radius: 0.3125rem;
+}
+
+/* Small m */
+@media (max-width: 374px) {
+    .container {
+        max-width: 370px;
+    }
+    .container .content {
+        max-width: 256px;
+    }
+}
+/* Medium m */
+@media (max-width: 424px) {
+    .container {
+        max-width: 350px;
+    }
+    .container .content {
+        max-width: 330px;
+    }
+}
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        /* grid-auto-flow: column; */
+        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .content {
+        /* height: 30rem; */
+        max-width: 13rem;
+    }
+    .container .content .text p {
+        margin-bottom: 7.0625rem;
+    }
+}
+/* Medium pc */
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .content {
+        /* height: 30rem; */
+        max-width: 14rem;
+    }
+    .container .content .text p {
+        margin-bottom: 7.0625rem;
+    }
+}
+/* Large pc */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        align-content: stretch;
+        height: 100%;
+        margin: 1.5rem;
+    }
+    .container .content {
+        /* height: 35rem; */
+        max-width: 17rem;
+    }
+    .container .content .text p {
+        margin: 2rem 0 7rem;
+    }
+}
+/* End Global Rules */
+/* Stat Comm  */
+
+.container .content {
+    padding: 2rem;
+}
+.container .content .text h1 {
+    padding: 1rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--lightGray-color);
+}
+.container .content .text p {
+    color: var(--paragraphs-color);
+    font-size: var(--paragraph-font-size);
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.container .content .link a {
+    display: inline-block;
+    margin-top: 0.9375rem;
+    padding: 10px 25px;
+    width: fit-content;
+    border-radius: 1.75rem;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid var(--lightGray-color);
+    background-color: var(--lightGray-color);
+    /* text-shadow: */
+}
+.container .content .link:hover a {
+    background-color: transparent;
+    color: var(--lightGray-color);
+}
+/* End Comm  */
+
+.container .content-sedans {
+    background-color: var(--BrightOrange-color);
+    border-radius: 5px 5px 0 0;
+}
+.container .content-sedans .link a {
+    color: var(--BrightOrange-color);
+}
+
+/* End sedans */
+.container .content-suvs {
+    background-color: var(--DarkCyan-color);
+}
+.container .content-suvs .link a {
+    color: var(--DarkCyan-color);
+}
+
+/* End suvs */
+.container .content-luxury {
+    background-color: var(--VeryDarkCyan-color);
+    border-radius: 0 0 5px 5px;
+}
+.container .content-luxury .link a {
+    color: var(--VeryDarkCyan-color);
+}
+@media (width<=769px) {
+    .container .content-sedans {
+        border-radius: 5px 0 0 5px;
+    }
+    .container .content-luxury {
+        border-radius: 0 5px 5px 0;
+    }
+}
+/* End luxury */
